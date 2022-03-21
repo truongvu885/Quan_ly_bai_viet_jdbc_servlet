@@ -16,7 +16,7 @@
     <!-- ace settings handler -->
     <script src="<c:url value="/templates/admin/assets/js/ace-extra.min.js"/>"></script>
 </head>
-<body>
+<body class="no-skin">
 <!--header-->
 <%@ include file="../common/admin/header.jsp" %>
 <!--header-->
