@@ -1,2 +1,16 @@
+com\hocjavaweb\DAO\impl\CategoryDAO.class
+com\hocjavaweb\service\impl\NewService.class
+com\hocjavaweb\DAO\ICategoryDAO.class
+com\hocjavaweb\model\AbstractModel.class
+com\hocjavaweb\service\INewService.class
+com\hocjavaweb\model\CategoryModel.class
+com\hocjavaweb\service\impl\CategoryService.class
+com\hocjavaweb\model\NewsModel.class
 com\hocjavaweb\controller\admin\HomeController.class
+com\hocjavaweb\model\UserModel.class
 com\hocjavaweb\controller\web\HomeController.class
+com\hocjavaweb\DAO\INewDAO.class
+com\hocjavaweb\model\RoleModel.class
+com\hocjavaweb\DAO\impl\NewDAO.class
+com\hocjavaweb\model\CommentModel.class
+com\hocjavaweb\service\ICategoryService.class

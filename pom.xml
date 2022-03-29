@@ -17,6 +17,8 @@
         <jstl.version>1.2</jstl.version>
         <servlet.api.version>3.1.0</servlet.api.version>
         <sitemesh.version>2.4.2</sitemesh.version>
+        <mysql.version>8.0.13</mysql.version>
+        <weld.servlet.version>1.1.0.Final</weld.servlet.version>
     </properties>
 
     <dependencies>
@@ -40,6 +42,24 @@
             <artifactId>sitemesh</artifactId>
             <version>${sitemesh.version}</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.jboss.weld.servlet/weld-servlet -->
+        <dependency>
+            <groupId>org.jboss.weld.servlet</groupId>
+            <artifactId>weld-servlet</artifactId>
+            <version>${weld.servlet.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.sonatype.sisu</groupId>
+            <artifactId>sisu-inject-bean</artifactId>
+            <version>1.4.2</version>
+        </dependency>
+
 
     </dependencies>
     <build>

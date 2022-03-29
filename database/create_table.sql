@@ -61,3 +61,8 @@ create table comment(
 alter table comment add constraint fk_comment_user foreign key (user_id) references user(id);
 
 alter table comment add constraint fk_comment_news foreign key (news_id) references news(id);
+
+insert into news(title,category_id)
+values ('Bài viết 1',1),
+       ('Bài viết 2',2),
+       ('Bài viết 3',3);
