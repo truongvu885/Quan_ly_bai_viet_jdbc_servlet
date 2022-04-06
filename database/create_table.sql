@@ -66,3 +66,7 @@ insert into news(title,category_id)
 values ('Bài viết 1',1),
        ('Bài viết 2',2),
        ('Bài viết 3',3);
+select * from news where category_id = 1;
+select * from category;
+delete  from news where category_id = 1;
+alter table news AUTO_INCREMENT = 1

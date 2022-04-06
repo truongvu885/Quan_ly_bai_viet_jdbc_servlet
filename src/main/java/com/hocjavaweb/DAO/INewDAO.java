@@ -4,6 +4,8 @@ import com.hocjavaweb.model.NewsModel;
 
 import java.util.List;
 
-public interface INewDAO {
+public interface INewDAO extends GenergicDAO<NewsModel>{
     List<NewsModel> findByCategoryId(Long categoryId);
+    Long save(NewsModel newsModel);
+
 }
