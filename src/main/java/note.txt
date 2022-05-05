@@ -1,0 +1,4 @@
+- add thư viện vào file pom
+- packet common chứa các file jsp dùng chung
+- packet decorator chứa master layout
+- WEB-INF chứa file xml

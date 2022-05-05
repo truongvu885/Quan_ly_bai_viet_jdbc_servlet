@@ -69,4 +69,7 @@ values ('Bài viết 1',1),
 select * from news where category_id = 1;
 select * from category;
 delete  from news where category_id = 1;
-alter table news AUTO_INCREMENT = 1
+alter table news AUTO_INCREMENT = 1;
+update news set title = 'hello 123';
+
+

@@ -21,7 +21,7 @@ public class NewDAO extends AbstractDAO<NewsModel> implements INewDAO {
     @Override
     public Long save(NewsModel newsModel) {
         String sql = "insert into news(title,content,category_id) values (?,?,?)";
-        Long id = null;
+        Long id = 0L;
         Connection connection = null;
         ResultSet resultSet = null;
         PreparedStatement statement = null;
@@ -32,10 +32,12 @@ public class NewDAO extends AbstractDAO<NewsModel> implements INewDAO {
             statement.setLong(3, newsModel.getCategory_id());
             statement.setString(1, newsModel.getTitle());
             statement.setString(2, newsModel.getContent());
-            statement.executeUpdate();
-            resultSet = statement.getGeneratedKeys();
-            if(resultSet.next()){
-                id = resultSet.getLong(1);
+            int rowAffected =  statement.executeUpdate();
+            if(rowAffected == 1){
+                resultSet = statement.getGeneratedKeys();
+                if(resultSet.next()){
+                    id = resultSet.getLong(1);
+                }
             }
             connection.commit();
             return id;
@@ -62,5 +64,10 @@ public class NewDAO extends AbstractDAO<NewsModel> implements INewDAO {
                 return null;
             }
         }
+    }
+
+    @Override
+    public void update(NewsModel newsModel) {
+        String sql = "update news set title";
     }
 }

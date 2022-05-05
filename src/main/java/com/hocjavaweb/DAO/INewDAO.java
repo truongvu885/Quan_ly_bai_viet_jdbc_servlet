@@ -7,5 +7,5 @@ import java.util.List;
 public interface INewDAO extends GenergicDAO<NewsModel>{
     List<NewsModel> findByCategoryId(Long categoryId);
     Long save(NewsModel newsModel);
-
+    void update(NewsModel newsModel);
 }
