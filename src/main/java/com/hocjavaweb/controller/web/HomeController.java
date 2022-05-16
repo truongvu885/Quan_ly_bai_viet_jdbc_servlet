@@ -7,8 +7,6 @@ import com.hocjavaweb.service.INewService;
 import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -28,7 +26,7 @@ public class HomeController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String title = "Bài viết 6";
         String content = "bài 5";
-        Long category_id = 1L;
+        Long category_id = 3L;
         NewsModel newsModel = new NewsModel();
         newsModel.setTitle(title);
         newsModel.setContent(content);

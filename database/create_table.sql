@@ -70,6 +70,6 @@ select * from news where category_id = 1;
 select * from category;
 delete  from news where category_id = 1;
 alter table news AUTO_INCREMENT = 1;
-update news set title = 'hello 123';
+update news set title = 'hello 123' where category_id =1 ;
 
 

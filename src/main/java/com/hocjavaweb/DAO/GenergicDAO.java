@@ -5,5 +5,8 @@ import com.hocjavaweb.mapper.RowMapper;
 import java.util.List;
 
 public interface GenergicDAO<T> {
-   List<T> query(String sql, RowMapper<T> rowMapper, Object... parameters);
+   <T> List<T> query(String sql, RowMapper<T> rowMapper, Object... parameters);
+   void update(String sql, Object... parameter);
+   Long insert(String sql, Object... parameter);
+
 }
