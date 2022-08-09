@@ -15,6 +15,10 @@
           id="main-ace-style"/>
     <!-- ace settings handler -->
     <script src="<c:url value="/templates/admin/assets/js/ace-extra.min.js"/>"></script>
+    <link rel="stylesheet" href="<c:url value="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css"/>">
+    <script src="<c:url value="https://code.jquery.com/jquery-3.3.1.min.js"/>"></script>
+    <script src="<c:url value="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"/>"></script>
+    <script src="<c:url value="/templates/paging/jquery.twbsPagination.js"/>" type="text/javascript"></script>
 </head>
 <body class="no-skin">
 <!--header-->
@@ -32,7 +36,7 @@
     <%@ include file="../common/admin/menu.jsp" %>
     <!--menu-->
 
-   <dec:body />
+    <dec:body/>
 
     <!--footer-->
     <%@ include file="../common/admin/footer.jsp" %>
@@ -42,8 +46,7 @@
         <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
     </a>
 </div>
-<script src="<c:url value="/templates/admin/assets/js/jquery.2.1.1.min.js"/>"></script>
-<script src="<c:url value="/templates/admin/assets/js/jquery.1.11.1.min.js"/>"></script>
+<%--<script src="<c:url value="/templates/admin/assets/js/jquery.2.1.1.min.js"/>"></script>--%>
 <script type="text/javascript">
     window.jQuery || document.write("<script src='<c:url value="/templates/admin/assets/js/jquery.min.js"/>'>" + "<" + "/script>");
 </script>
@@ -53,17 +56,22 @@
 <script type="text/javascript">
     if ('ontouchstart' in document.documentElement) document.write("<script src='<c:url value="/templates/admin/assets/js/jquery.mobile.custom.min.js"/>'>" + "<" + "/script>");
 </script>
+
 <script src="<c:url value="/templates/admin/assets/js/bootstrap.min.js"/>"></script>
 <script src="<c:url value="/templates/admin/assets/js/excanvas.min.js"/>"></script>
+<%--<script src="<c:url value="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"/>"></script>--%>
+<%--<script src="<c:url value="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js"/>"></script>--%>
+<%--<script src="<c:url value="https://cdnjs.cloudflare.com/ajax/libs/flot/4.2.2/jquery.flot.js"/>"></script>--%>
 <script src="<c:url value="/templates/admin/assets/js/jquery-ui.custom.min.js"/>"></script>
 <script src="<c:url value="/templates/admin/assets/js/jquery.ui.touch-punch.min.js"/>"></script>
 <script src="<c:url value="/templates/admin/assets/js/jquery.easypiechart.min.js"/>"></script>
-<script src="<c:url value="/templates/admin/assets/js/jquery.sparkline.min.js"/>"></script>
 <script src="<c:url value="/templates/admin/assets/js/jquery.flot.min.js"/>"></script>
+<script src="<c:url value="/templates/admin/assets/js/jquery.sparkline.min.js"/>"></script>
 <script src="<c:url value="/templates/admin/assets/js/jquery.flot.pie.min.js"/>"></script>
 <script src="<c:url value="/templates/admin/assets/js/jquery.flot.resize.min.js"/>"></script>
 <script src="<c:url value="/templates/admin/assets/js/ace-elements.min.js"/>"></script>
 <script src="<c:url value="/templates/admin/assets/js/ace.min.js"/>"></script>
+
 <script type="text/javascript">
     jQuery(function ($) {
         $('.easy-pie-chart.percentage').each(function () {

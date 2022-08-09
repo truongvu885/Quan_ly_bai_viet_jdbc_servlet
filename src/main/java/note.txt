@@ -2,3 +2,35 @@
 - packet common chứa các file jsp dùng chung
 - packet decorator chứa master layout
 - WEB-INF chứa file xml
+- SOLID principes : https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design-fr
+- JDBC
+    + connection
+    + preparestament
+    + Resultset
+- RESTful API (Web services)
+    + Json
+    +restful api best practive HTTP method :
+        -GET: query dữ liệu
+        -POST:thêm mới dữ liệu
+        -DELETE: xóa
+        -PUT:cập nhập
+    + đọc dữ liệu json từ client gửi lên
+        - request.getReader trả về 1 bufferReader -> String
+        - Sử dụng ObjectMapper -> convert Object thành model cụ thể (of)
+    + gửi data về client
+        - obejectMapper.writeValue
+- phân trang danh sách quản lý
+    +BeanUtils - mapper request
+    + listResult : findAll theo offset-limit
+    + totalPage, totalItem, maxPageItem, page
+    + Pageble --- xử lý paging và sort
+- phân quyền
+    + authentication : chưa đăng nhập, kiểm tra xem có đăng nhập được không
+    + authoriazation : kiểm tra xem là user hay adminy
+        - user không đươc truy cập admin và ngược lại
+        - redirect đến trang nào
+        - phân quyền các user với nhau, các admin với nhau
+    + httpServletRequest . getSession()
+
+
+

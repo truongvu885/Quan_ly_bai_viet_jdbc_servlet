@@ -1,0 +1,5 @@
+
+k	java:S1178"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÒùÏ°ùÿÿÿÿ
+l	java:S116	"RRename this field "role_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³˜ÞÊøÿÿÿÿ
+c	java:S1004"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(èê¢î
+h	java:S1008"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÒùÏ°ùÿÿÿÿ

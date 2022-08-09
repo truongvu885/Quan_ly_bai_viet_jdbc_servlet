@@ -1,6 +1,6 @@
 package com.hocjavaweb.model;
 
-public class CommentModel extends AbstractModel{
+public class CommentModel extends AbstractModel<CommentModel>{
    private String content;
    private String user_id ;
    private String news_id ;

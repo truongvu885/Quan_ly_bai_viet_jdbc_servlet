@@ -66,10 +66,10 @@ insert into news(title,category_id)
 values ('Bài viết 1',1),
        ('Bài viết 2',2),
        ('Bài viết 3',3);
-select * from news where category_id = 1;
+select * from news where id = 1;
 select * from category;
-delete  from news where category_id = 1;
+delete  from news where category_id is not null;
 alter table news AUTO_INCREMENT = 1;
-update news set title = 'hello 123' where category_id =1 ;
+update news set title = 'hello 123',thumbnail = '123' where id =1 ;
 
 

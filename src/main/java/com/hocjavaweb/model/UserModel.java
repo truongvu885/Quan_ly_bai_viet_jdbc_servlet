@@ -1,12 +1,21 @@
 package com.hocjavaweb.model;
 
-public class UserModel extends AbstractModel {
+public class UserModel extends AbstractModel<UserModel> {
 
     private String userName;
     private String passWord;
     private String fullName;
     private int status;
     private long role_id;
+    private RoleModel role = new RoleModel();
+
+    public RoleModel getRole() {
+        return role;
+    }
+
+    public void setRole(RoleModel role) {
+        this.role = role;
+    }
 
     public String getUserName() {
         return userName;

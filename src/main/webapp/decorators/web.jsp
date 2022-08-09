@@ -23,7 +23,7 @@
   <!--footer-->
   <%@ include file="../common/web/footer.jsp"%>
   <!--footer-->
-  
+
   <!-- Bootstrap core JS-->
   <script src="<c:url value="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"/>"></script>
   <!-- Core theme JS-->

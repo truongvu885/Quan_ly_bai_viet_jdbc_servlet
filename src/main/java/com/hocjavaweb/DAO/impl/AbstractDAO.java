@@ -6,14 +6,18 @@ import com.hocjavaweb.mapper.RowMapper;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ResourceBundle;
 
 public class AbstractDAO<T> implements GenergicDAO<T> {
+
+    ResourceBundle resourceBundle = ResourceBundle.getBundle("db");
+
     public Connection getConnection() {
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            String url = "jdbc:mysql://localhost:3306/newservlet_t3_2022";
-            String user = "root";
-            String passWord = "Truong@2102";
+            Class.forName(resourceBundle.getString("driverName"));
+            String url = resourceBundle.getString("url");
+            String user = resourceBundle.getString("user");
+            String passWord = resourceBundle.getString("passWord");
             return DriverManager.getConnection(url, user, passWord);
         } catch (ClassNotFoundException | SQLException e) {
             return null;
@@ -30,9 +34,9 @@ public class AbstractDAO<T> implements GenergicDAO<T> {
         if (connection != null) {
             try {
                 statement = connection.prepareStatement(sql);
-                resultSet = statement.executeQuery();
                 //set parameter
                 setParameter(statement, parameters);
+                resultSet = statement.executeQuery();
                 while (resultSet.next()) {
                     results.add(rowMapper.mapRow(resultSet));
                 }
@@ -158,5 +162,43 @@ public class AbstractDAO<T> implements GenergicDAO<T> {
                 return null;
             }
         }
+    }
+
+    @Override
+    public int count(String sql, Object... parameters) {
+        PreparedStatement statement = null;
+        ResultSet resultSet = null;
+        //open connection
+        Connection connection = getConnection();
+        if (connection != null) {
+            try {
+                int count = 0;
+                statement = connection.prepareStatement(sql);
+                //set parameter
+                setParameter(statement, parameters);
+                resultSet = statement.executeQuery();
+                while (resultSet.next()) {
+                    count = resultSet.getInt(1);
+                }
+                return count;
+            } catch (SQLException e) {
+                return 0;
+            } finally {
+                try {
+                    if (connection != null) {
+                        connection.close();
+                    }
+                    if (statement != null) {
+                        statement.close();
+                    }
+                    if (resultSet != null) {
+                        resultSet.close();
+                    }
+                } catch (SQLException e) {
+                    return 0;
+                }
+            }
+        }
+        return 0;
     }
 }

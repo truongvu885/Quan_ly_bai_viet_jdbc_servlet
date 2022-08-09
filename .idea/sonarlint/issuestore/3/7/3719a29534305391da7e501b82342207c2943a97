@@ -1,0 +1,24 @@
+
+S
+java:S4977"=Rename "T" which hides a type parameter from the outer scope.(”âΩÏ
+K
+java:S1143:"5Remove this return statement from this finally block.(•πÔç
+L
+java:S1143¢"5Remove this return statement from this finally block.(•πÔç
+L
+java:S1143∆"5Remove this return statement from this finally block.(î∑≥õ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÙËÉÉ
+N
+java:S2589ç"7Remove this expression which always evaluates to "true"(§Ú™£
+M
+java:S2589d"7Remove this expression which always evaluates to "true"(§Ú™£
+M
+java:S25890"7Remove this expression which always evaluates to "true"(§Ú™£
+N
+java:S2589º"7Remove this expression which always evaluates to "true"(§Ú™£
+A
+java:S1168-"+Return an empty collection instead of null.(•πÔç
+A
+java:S1168:"+Return an empty collection instead of null.(•πÔç
+A
+java:S1168>"+Return an empty collection instead of null.(•πÔç
